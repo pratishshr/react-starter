@@ -10,11 +10,17 @@ npm install
 Start dev server
 
 ```
-npm run dev
+npm start
 ```
 
 Build
 
 ```
-npm start
+npm run build
+```
+
+For production build
+
+```
+npm run build:production
 ```
