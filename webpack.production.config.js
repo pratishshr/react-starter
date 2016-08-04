@@ -9,16 +9,11 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  entry: [
-    'webpack-dev-server/client?http://localhost:8080', // WebpackDevServer host and port
-    'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
-    __dirname + "/src/index.js"
-  ],
+  entry: __dirname + "/src/index.js",
   output: {
     path: __dirname + '/dist',
     publicPath: '/dist',
-    filename: 'bundle.js',
-    chunkFilename: "[id].js"
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
@@ -26,12 +21,6 @@ module.exports = {
       {test: /\.js$/, exclude: /node_modules/, loaders: ["react-hot", "babel-loader"]},
       {test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/, loader : 'file-loader', query: {name: 'fonts/[name].[ext]'}},
     ]
-  },
-  devServer: {
-    hot: true,
-    historyApiFallback: true,
-    inline: true,
-    port: 8080
   },
   plugins: [
     new ExtractTextPlugin("bundle.css")
