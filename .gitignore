@@ -1,5 +1,8 @@
-.DS_STORE
+# Dependencies #
 node_modules
-.idea
+
+# Distribution folder #
 dist
-npm-debug.log
+
+# Log files #
+*.log
