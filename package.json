@@ -11,7 +11,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint src",
-    "start": "webpack-dev-server",
+    "start": "yarn build && webpack-dev-server",
+    "build": "rimraf dist && webpack --progress --colors",
     "build:production": "rimraf dist && NODE_ENV=production webpack --config ./webpack.config.production.js --progress --colors -p"
   },
   "devDependencies": {
