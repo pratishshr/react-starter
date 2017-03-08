@@ -4,26 +4,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: [
-    'webpack-dev-server/client?http://localhost:8181', // WebpackDevServer host and port
-    'webpack/hot/only-dev-server', // 'only' prevents reload on syntax errors
-    './index.js'// the entry point of our app
-  ],
+  entry: './index.js', // the entry point of our app
   output: {
     publicPath: '/',
-    filename: 'js/bundle.js', // the output bundle
     chunkFilename: '[id].js',
-    path: resolve(__dirname, 'dist')
+    path: resolve(__dirname, 'dist'),
+    filename: 'js/bundle.[chunkhash].js' // the output bundle
   },
   context: resolve(__dirname, 'src'),
-  devtool: 'inline-source-map',
-  devServer: {
-    port: 8181,
-    hot: true, // enable HMR on the server
-    publicPath: '/', // match the output 'publicPath'
-    historyApiFallback: true, // respond to 404s with index.html
-    contentBase: resolve(__dirname, 'dist') // match the output path
-  },
   module: {
     rules: [
       {
@@ -49,13 +37,15 @@ module.exports = {
       }
     ]
   },
+  devtool: 'cheap-module-source-map',
   plugins: [
+    new ExtractTextPlugin('css/bundle.css'),
     new HtmlWebpackPlugin({
       template: resolve(__dirname, 'public/index.html')
     }),
-    new ExtractTextPlugin('css/bundle.css'),
-    new webpack.NamedModulesPlugin(), // prints more readable module names in the browser console on HMR updates
-    new webpack.NoEmitOnErrorsPlugin(), // do not emit compiled assets that include errors
-    new webpack.HotModuleReplacementPlugin() // enable HMR globally
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    new webpack.optimize.UglifyJsPlugin({ beautify: false, comments: false, sourceMap: true })
   ]
 };
