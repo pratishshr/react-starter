@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'geomanist';
+  src: url(../fonts/geomanist-regular-webfont.ttf);
+}
+
+body {
+  color: #ffffff;
+  background: #0C7EAF;
+  font-family: geomanist, "Helvetica Neue";
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-container h1 {
+  margin: 10px auto;
+  font-size: 80px;
+}
+
+.logo-container img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.github-buttons-wrapper {
+  padding: 20px;
+  text-align: center;
+}
+
+.contributer-list {
+  display: flex;
+  justify-content: center;
+  padding: 0 200px;
+}
+
+.contributer-item img {
+  width: 80px;
+  border-radius: 50%;
+  height: 80px;
+  border: 2px solid white;
+  margin: 4px;
+}
+
+.section h2 {
+  text-align: center;
+}
