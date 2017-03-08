@@ -10,7 +10,7 @@ module.exports = {
     './index.js'// the entry point of our app
   ],
   output: {
-    publicPath: '',
+    publicPath: '/',
     filename: 'js/bundle.js', // the output bundle
     chunkFilename: '[id].js',
     path: resolve(__dirname, 'dist')
@@ -37,11 +37,11 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        use: 'file-loader?name=[name].[ext]&publicPath=images/&outputPath=/images/'
+        use: 'file-loader?name=[name].[ext]&publicPath=/images/&outputPath=/images/'
       },
       {
         test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-        use: 'file-loader?name=[name].[ext]&publicPath=fonts/&outputPath=/fonts/'
+        use: 'file-loader?name=[name].[ext]&publicPath=/fonts/&outputPath=/fonts/'
       },
       {
         test: /\.scss$/,

@@ -7,6 +7,7 @@ import * as reactRouterUtil from './utils/reactRouterUtil';
 
 import App from './components/App';
 import Home from './components/home';
+import PageNotFound from './components/commons/PageNotFound';
 
 reactRouterUtil.scrollOnRouteChange(browserHistory);
 
@@ -15,6 +16,7 @@ const routes = (
     <Route path={routeConstants.HOME} component={App}>
       <IndexRoute component={Home}/>
     </Route>
+    <Route path="*" component={PageNotFound}/>
   </Router>
 );
 
