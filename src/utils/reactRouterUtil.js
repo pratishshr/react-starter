@@ -1,3 +1,14 @@
+import useBaseName from 'history/lib/useBasename';
+
+/**
+ * Adds support for using base hrefs
+ * @param browserHistory
+ * @param baseName
+ */
+export function addBaseName(browserHistory, baseName) {
+  return useBaseName(() => browserHistory)({ basename: `/${baseName}` });
+}
+
 /**
  * Fix to scroll the window to top when react router transitions to next page
  * @param browserHistory

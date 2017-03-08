@@ -6,3 +6,7 @@ dist
 
 # Log files #
 *.log
+
+# Environmend variables #
+.env
+

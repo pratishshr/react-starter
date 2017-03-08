@@ -1,7 +1,11 @@
+const dotenv = require('dotenv');
 const webpack = require('webpack');
 const resolve = require('path').resolve;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+// Initialize environment variables
+dotenv.config();
 
 module.exports = {
   entry: [
@@ -50,10 +54,14 @@ module.exports = {
     ]
   },
   plugins: [
+    new ExtractTextPlugin('css/bundle.css'),
     new HtmlWebpackPlugin({
       template: resolve(__dirname, 'public/index.html')
     }),
-    new ExtractTextPlugin('css/bundle.css'),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.BASE_HREF': JSON.stringify(process.env.BASE_HREF)
+    }),
     new webpack.NamedModulesPlugin(), // prints more readable module names in the browser console on HMR updates
     new webpack.NoEmitOnErrorsPlugin(), // do not emit compiled assets that include errors
     new webpack.HotModuleReplacementPlugin() // enable HMR globally
