@@ -3,13 +3,13 @@ Starter kit for large scale React Projects.
 
 ## TODO
 - [x] Add ESLint
-- [ ] Add test cases
 - [x] Add React-Router 
 - [x] Migrate to webpack 2.0
-- [ ] Add a generic error handle
+- [ ] Add a generic error handler
 - [ ] **Write better documentation**
 - [ ] Add an api that supports JWT tokens
 - [x] Add React-Router util for page scrolls
+- [ ] **Add test cases (using Mocha and Chai)**
 - [ ] Add support for handling authentications
 - [x] Show how to handle a simple api request call
 - [x] Separate the application into different layers
