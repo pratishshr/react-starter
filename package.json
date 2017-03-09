@@ -14,23 +14,36 @@
     "prestart": "yarn build",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "start": "webpack-dev-server",
     "build": "rimraf dist && webpack --progress --colors",
     "build:production": "rimraf dist && NODE_ENV=production webpack --config ./webpack.config.production.js --progress --colors -p"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/mocks/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
   "devDependencies": {
     "babel-core": "^6.23.1",
+    "babel-jest": "^19.0.0",
     "babel-loader": "^6.3.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "css-loader": "^0.26.2",
+    "enzyme": "^2.7.1",
     "eslint": "^3.16.1",
     "eslint-plugin-react": "^6.10.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
     "html-webpack-plugin": "^2.28.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^19.0.2",
     "node-sass": "^4.5.0",
+    "react-addons-test-utils": "^15.4.2",
     "react-hot-loader": "^1.3.0",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.2",

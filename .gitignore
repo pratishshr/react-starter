@@ -4,9 +4,15 @@ node_modules
 # Distribution folder #
 dist
 
+# Test Coverage folder #
+coverage
+
 # Log files #
 *.log
 
-# Environmend variables #
+# Environment variables #
 .env
+
+# IDE Configurations
+.idea/
 
