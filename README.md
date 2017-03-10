@@ -3,6 +3,7 @@ Starter kit for large scale React Projects.
 
 ## TODO
 - [x] Add ESLint
+- [ ] Use Async Await
 - [x] Add React-Router 
 - [x] Migrate to webpack 2.0
 - [ ] Add a generic error handler
