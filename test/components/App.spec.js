@@ -1,7 +1,3 @@
-/**
- * Created by Romit Amgai<romitamgai@lftechnology.com> on 3/9/17.
- */
-
 import React from 'react';
 import {shallow} from 'enzyme';
 
