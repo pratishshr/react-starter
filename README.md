@@ -1,5 +1,5 @@
 # react-starter
-Starter kit for large scale React Projects.
+Starter kit for React Projects.
 
 ## TODO
 - [x] Add ESLint
