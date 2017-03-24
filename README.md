@@ -10,7 +10,7 @@ Starter kit for React Projects.
 - [ ] **Write better documentation**
 - [ ] Add an api that supports JWT tokens
 - [x] Add React-Router util for page scrolls
-- [ ] **Add test cases (using Mocha and Chai)**
+- [x] Add test cases (using JEST)
 - [ ] Add support for handling authentications
 - [x] Show how to handle a simple api request call
 - [x] Separate the application into different layers
