@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import '../../../public/images/favicon.ico';
 import reactLogo from '../../../public/images/react-logo.png';
 
 import ContributerList from './ContributerList';
