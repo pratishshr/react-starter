@@ -10,6 +10,7 @@ const USER_NAME = 'pratishshr';
 const REPO_NAME = 'react-starter';
 
 class Home extends Component {
+
   render() {
     return (
       <div className="section">
@@ -23,6 +24,7 @@ class Home extends Component {
       </div>
     );
   }
+
 }
 
 export default Home;

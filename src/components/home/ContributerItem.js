@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 
 const ContributerItem = ({ profileUrl, imageUrl }) => {
+
   return (
     <div className="contributer-item">
       <a href={profileUrl} target="_blank">
@@ -8,6 +9,7 @@ const ContributerItem = ({ profileUrl, imageUrl }) => {
       </a>
     </div>
   );
+
 };
 
 ContributerItem.propTypes = {
