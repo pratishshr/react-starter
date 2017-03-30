@@ -6,21 +6,24 @@ import Spinner from '../commons/Spinner';
 import ContributerItem from './ContributerItem';
 
 class ContributerList extends Component {
+
   constructor() {
     super();
+    
     this.state = {
       isLoading: false,
       contributers: []
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this.setState({ isLoading: true });
-    githubService.fetchContributers().then(response => {
-      this.setState({
-        isLoading: false,
-        contributers: response.data
-      });
+
+    let response = await githubService.fetchContributers();
+
+    this.setState({
+      isLoading: false,
+      contributers: response.data
     });
   }
 
@@ -42,6 +45,7 @@ class ContributerList extends Component {
       </div>
     );
   }
+
 }
 
 export default ContributerList;

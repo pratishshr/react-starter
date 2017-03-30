@@ -8,6 +8,7 @@
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
+    "ecmaVersion": 2017,
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
       "jsx": true
@@ -23,6 +24,8 @@
     "quotes": ["error", "single"],
     "react/jsx-uses-vars": ["error"],
     "react/jsx-uses-react": ["error"],
-    "linebreak-style": ["error", "unix"]
+    "linebreak-style": ["error", "unix"],
+    "padded-blocks": ["error", {"classes": "always"}],
+    "comma-spacing": ["error", {"before": false, "after": true}]
   }
 }

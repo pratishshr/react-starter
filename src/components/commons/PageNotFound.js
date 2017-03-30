@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import reactLogo from '../../../public/images/react-logo.png';
 
 class PageNotFound extends Component {
+
   render() {
     return (
       <div className="not-found-container">
@@ -14,6 +15,7 @@ class PageNotFound extends Component {
       </div>
     );
   }
+
 }
 
 export default PageNotFound;
