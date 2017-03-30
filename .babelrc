@@ -1,9 +1,11 @@
 {
   "presets": [
-    ["es2015", {"modules": false}],
+    ["es2015", { "modules": false }],
+    "es2017",
     "react"
   ],
   "plugins": [
+    "transform-runtime",
     "react-hot-loader/babel"
   ],
   "env": {
