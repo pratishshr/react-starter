@@ -48,7 +48,6 @@ module.exports = {
       }
     ]
   },
-  devtool: 'cheap-module-source-map',
   plugins: [
     new ExtractTextPlugin('css/bundle.css'),
     new HtmlWebpackPlugin({
@@ -58,6 +57,6 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('production'),
       'process.env.BASE_HREF': JSON.stringify(process.env.BASE_HREF)
     }),
-    new webpack.optimize.UglifyJsPlugin({ beautify: false, comments: false, sourceMap: true })
+    new webpack.optimize.UglifyJsPlugin()
   ]
 };
