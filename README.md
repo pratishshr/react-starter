@@ -5,8 +5,8 @@ Starter kit for React Projects.
 
 ## TODO
 - [x] Add ESLint
-- [ ] Use Async Await
-- [x] Add React-Router 
+- [x] Use Async Await
+- [x] Add React-Router
 - [x] Migrate to webpack 2.0
 - [ ] Add a generic error handler
 - [ ] **Write better documentation**
@@ -41,4 +41,3 @@ For production build:
 ```bash
 yarn build:production
 ```
-
