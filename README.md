@@ -1,8 +1,8 @@
 # react-starter
-Starter kit for React Projects.
-
 [![Build Status](https://travis-ci.org/pratishshr/react-starter.svg?branch=master)](https://travis-ci.org/pratishshr/react-starter)
 [![Code Climate](https://codeclimate.com/github/pratishshr/react-starter/badges/gpa.svg)](https://codeclimate.com/github/pratishshr/react-starter)
+
+Starter kit for React Projects.
 
 ## TODO
 - [x] Add ESLint
