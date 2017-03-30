@@ -1,10 +1,9 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
+import Spinner from '../../../src/components/commons/Spinner';
 import ContributerList from '../../../src/components/home/ContributerList';
 import ContributerItem from '../../../src/components/home/ContributerItem';
-import Spinner from '../../../src/components/commons/Spinner';
-import * as githubService from '../../../src/services/githubService';
 
 const contributors = [
   {
