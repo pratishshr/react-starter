@@ -29,13 +29,14 @@
     "react-router-dom": "^4.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.23.1",
+    "babel-core": "^6.24.0",
     "babel-jest": "^19.0.0",
-    "babel-loader": "^6.3.2",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.0",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "^6.23.0",
-    "css-loader": "^0.26.2",
+    "css-loader": "^0.27.3",
     "enzyme": "^2.7.1",
     "eslint": "^3.16.1",
     "eslint-plugin-react": "^6.10.0",
@@ -45,13 +46,14 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^19.0.2",
     "node-sass": "^4.5.0",
+    "postcss-loader": "^1.3.3",
     "react-addons-test-utils": "^15.4.2",
-    "react-hot-loader": "^1.3.0",
+    "react-hot-loader": "3.0.0-beta.6",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.2",
-    "style-loader": "^0.13.2",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "style-loader": "^0.16.1",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
   },
   "jest": {
     "moduleNameMapper": {
