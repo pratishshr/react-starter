@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import routeConstants from './constants/routeConstants';
 
@@ -8,15 +8,15 @@ import PageNotFound from './components/commons/PageNotFound';
 
 const baseHref = process.env.BASE_HREF || '/';
 
-const routes = (
-  <Router basename={baseHref}>
+const Router = () => (
+  <BrowserRouter basename={baseHref}>
     <div className="container">
       <Switch>
-        <Route path={routeConstants.HOME} exact component={Home} />
+        <Route exact path={routeConstants.HOME} component={Home} />
         <Route component={PageNotFound} />
       </Switch>
     </div>
-  </Router>
+  </BrowserRouter>
 );
 
-export default routes;
+export default Router;
