@@ -10,21 +10,24 @@
   "author": "pratishshr <vanroshr@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "build": "rimraf dist && webpack --progress --colors",
+    "build:production": "rimraf dist && NODE_ENV=production webpack --config ./webpack.config.production.js --progress --colors -p",
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint src test",
+    "lint:fix": "eslint src test --fix",
     "prestart": "yarn build",
     "predeploy": "yarn build",
-    "lint": "eslint src test",
-    "deploy": "gh-pages -d dist",
     "start": "webpack-dev-server",
-    "test:coverage": "jest --coverage",
-    "lint:fix": "eslint src test --fix",
-    "build": "rimraf dist && webpack --progress --colors",
-    "build:production": "rimraf dist && NODE_ENV=production webpack --config ./webpack.config.production.js --progress --colors -p"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "axios": "^0.15.3",
     "dotenv": "^4.0.0",
     "history": "^3.0.0",
+    "notie": "^4.3.0",
+    "prismjs": "^1.6.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router-dom": "^4.0.0"
