@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import errorHandler from '../../utils/errorHandler';
 import * as githubService from '../../services/githubService';
 
 import Spinner from '../commons/Spinner';
@@ -9,7 +10,7 @@ class ContributerList extends Component {
 
   constructor() {
     super();
-    
+
     this.state = {
       isLoading: false,
       contributers: []
@@ -19,17 +20,21 @@ class ContributerList extends Component {
   async componentDidMount() {
     this.setState({ isLoading: true });
 
-    let response = await githubService.fetchContributers();
-
-    this.setState({
-      isLoading: false,
-      contributers: response.data
-    });
+    try {
+      let response = await githubService.fetchContributers();
+      this.setState({
+        isLoading: false,
+        contributers: response.data
+      });
+    } catch (e) {
+      this.setState({ isLoading: false });
+      errorHandler(e);
+    }
   }
 
   render() {
     return (
-      <div className="hawa">
+      <div className="contributer-wrapper">
         <h2>Contributers</h2>
         <div className="contributer-list">
           {!this.state.isLoading ?
