@@ -1,6 +1,7 @@
 const routeConstants = {
   HOME: '/',
-  GUIDES: '/guides'
+  GUIDES: '/guides',
+  ERROR_HANDLING: '/docs/error-handling'
 };
 
 export default routeConstants;
