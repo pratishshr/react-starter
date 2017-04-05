@@ -3,6 +3,11 @@
   src: url(../fonts/geomanist-regular-webfont.ttf);
 }
 
+*, html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: #ffffff;
   background: #0C7EAF;
@@ -30,10 +35,15 @@ body {
   text-align: center;
 }
 
+.contributer-wrapper h2 {
+  margin-top: 10px;
+}
+
 .contributer-list {
+  margin: 25px;
   display: flex;
-  justify-content: center;
   padding: 0 200px;
+  justify-content: center;
 }
 
 .contributer-item img {
@@ -42,6 +52,14 @@ body {
   height: 80px;
   border: 2px solid white;
   margin: 4px;
+}
+
+.main-container {
+  padding: 50px 0 0 0;
+}
+
+.section {
+  padding: 50px;
 }
 
 .section h2 {
@@ -58,4 +76,65 @@ body {
 
 .not-found-container .not-found-message {
   font-size: 60px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.navbar {
+  background: #2D2D2D;
+}
+
+.navbar-header {
+  padding: 10px;
+}
+
+.navbar-header img {
+  height: 30px;
+  width: 30px;
+  line-height: 50px;
+}
+
+.navbar-nav a {
+  color: #ffffff;
+}
+
+.navbar-nav li > a:hover {
+  background: #000000;
+}
+
+.navbar-nav li > a:focus {
+  background: #000000;
+}
+
+.docs-sidebar {
+  float: left;
+  width: 20%;
+  padding: 50px;
+}
+
+.docs-info {
+  float: right;
+  width: 80%;
+  padding: 50px;
+}
+
+.button-list button {
+  margin: 0 10px;
+}
+
+.notie-container {
+  z-index: 9999 !important;
+}
+
+.error-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.color-red {
+  color: red;
 }
