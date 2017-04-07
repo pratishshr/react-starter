@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 class GithubButtons extends Component {
+
   render() {
     let { user, repo } = this.props;
     let starUrl = `https://ghbtns.com/github-btn.html?user=${user}&repo=${repo}&type=star&count=true&size=large`;
@@ -27,6 +28,7 @@ class GithubButtons extends Component {
       </div>
     );
   }
+
 }
 
 GithubButtons.propTypes = {

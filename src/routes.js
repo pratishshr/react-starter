@@ -1,23 +1,22 @@
 import React from 'react';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import { scrollOnRouteChange, addBaseName } from './utils/reactRouterUtil';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import routeConstants from './constants/routeConstants';
 
-import App from './components/App';
 import Home from './components/home';
 import PageNotFound from './components/commons/PageNotFound';
 
-const history = addBaseName(browserHistory, process.env.BASE_HREF || '/');
-scrollOnRouteChange(history);
+const baseHref = process.env.BASE_HREF || '/';
 
-const routes = (
-  <Router history={history}>
-    <Route path={routeConstants.HOME} component={App}>
-      <IndexRoute component={Home}/>
-    </Route>
-    <Route path="*" component={PageNotFound}/>
-  </Router>
+const Router = () => (
+  <BrowserRouter basename={baseHref}>
+    <div className="container">
+      <Switch>
+        <Route exact path={routeConstants.HOME} component={Home} />
+        <Route component={PageNotFound} />
+      </Switch>
+    </div>
+  </BrowserRouter>
 );
 
-export default routes;
+export default Router;

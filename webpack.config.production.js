@@ -35,6 +35,10 @@ module.exports = {
         use: `file-loader?name=[name].[ext]&publicPath=/${baseHref}/images/&outputPath=/images/`
       },
       {
+        test: /\.ico$/,
+        use: 'file-loader?name=[name].[ext]&publicPath=/images/&outputPath=/'
+      },
+      {
         test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         use: `file-loader?name=[name].[ext]&publicPath=/${baseHref}/fonts/&outputPath=/fonts/`
       },
@@ -44,7 +48,6 @@ module.exports = {
       }
     ]
   },
-  devtool: 'cheap-module-source-map',
   plugins: [
     new ExtractTextPlugin('css/bundle.css'),
     new HtmlWebpackPlugin({
@@ -54,6 +57,6 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('production'),
       'process.env.BASE_HREF': JSON.stringify(process.env.BASE_HREF)
     }),
-    new webpack.optimize.UglifyJsPlugin({ beautify: false, comments: false, sourceMap: true })
+    new webpack.optimize.UglifyJsPlugin()
   ]
 };
