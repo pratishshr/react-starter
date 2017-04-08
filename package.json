@@ -1,12 +1,13 @@
 {
   "name": "react-starter",
-  "version": "2.0.0",
-  "description": "Starter pack for react projects",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "Starter kit for React projects",
+  "main": "src/index.js",
   "repository": {
     "url": "git@github.com:pratishshr/react-starter.git",
     "type": "git"
   },
+  "private": true,
   "author": "pratishshr <vanroshr@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -20,6 +21,10 @@
     "lint:fix": "eslint src test --fix",
     "build": "rimraf dist && webpack --progress --colors",
     "build:production": "rimraf dist && NODE_ENV=production webpack --config ./webpack.config.production.js --progress --colors -p"
+  },
+  "engines": {
+    "node": ">= 6.9.0",
+    "npm": ">= 3.10.8"
   },
   "dependencies": {
     "axios": "^0.15.3",
