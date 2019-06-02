@@ -1,3 +1,7 @@
+# Repo Archived
+Use this instead    
+[React Boilerplate](https://github.com/pratishshr/react-boilerplate)
+
 # React Starter
 [![Build Status](https://travis-ci.org/pratishshr/react-starter.svg?branch=master)](https://travis-ci.org/pratishshr/react-starter)
 [![Code Climate](https://codeclimate.com/github/pratishshr/react-starter/badges/gpa.svg)](https://codeclimate.com/github/pratishshr/react-starter)
