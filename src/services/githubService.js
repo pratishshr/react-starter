@@ -9,5 +9,3 @@ const RESOURCE_CONTRIBUTERS = `${API_BASE_URL}/repos/${USER_NAME}/${REPO_NAME}/c
 export function fetchContributers() {
   return httpUtil.get(RESOURCE_CONTRIBUTERS);
 }
-
-
